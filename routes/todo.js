@@ -4,19 +4,19 @@ const router = express.Router();
 // Definisikan array todos untuk menyimpan data
 const todos = [
     {
-        "id": 1,
-        "task": "Test bang Pertama",
-        "completed": false
+        id: 1,
+        task: "Test bang Pertama",
+        completed: false
     },
     {
-        "id": 2,
-        "task": "Test bang Kedua",
-        "completed": false
+        id: 2,
+        task: "Test bang Kedua",
+        completed: false
     },
     {
-        "id": 3,
-        "task": "Test bang Ketiga",
-        "completed": false
+        id: 3,
+        task: "Test bang Ketiga",
+        completed: false
     }
 ];
 
