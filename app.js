@@ -1,14 +1,16 @@
-const express = require("express");
+const express = require('express');
 const app = express();
+const todoRoutes = require('./routes/todo.js');
+const port = 3000;
 
-app.get("/", (req, res) => {
-    res.send("Hello World");
+app.use(express.json());
+
+app.use('/todos', todoRoutes);
+app.set('view engine', 'ejs');
+app.get('/', (req, res) => {
+    res.render('index');
 });
 
-app.get("/about", (req, res) => {
-    res.send("Hai");
-});
-
-app.listen(3000, () => {
-    console.log("Server is running on http://localhost:3000");
-});
+app.listen(port, () => console.log(
+    `Server berjalan di port: http://localhost:${port}`
+));
